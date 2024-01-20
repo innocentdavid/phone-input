@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project + Shadcn.
 
 ## Getting Started
 
@@ -20,14 +20,15 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## How it works
 
-To learn more about Next.js, take a look at the following resources:
+When the page loads it automatically detects the user's location using [`ipinfo`](https://ipinfo.io) this provides the user's country
+- The provided country is then used to get the country's flagEmoji using [`countries-list`](https://www.npmjs.com/package/countries-list) and also get the country's calling code
+- List of all countries was also provided by the **country-list** package.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*-* The phone number gets validated as you type <br>
+*-* OnSubmit I used [`phone`]() package to properly validate the phone number
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
